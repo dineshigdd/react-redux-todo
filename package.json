@@ -8,8 +8,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack --watch --mode=development",
-    "heroku-postbuild": "webpack -p"
+    "webpack": "webpack --watch --mode=development"    
   },
   "keywords": [],
   "author": "",
