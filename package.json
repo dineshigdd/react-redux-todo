@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll transformIgnorePatterns /node_modules/(?!(frontend)/)",
     "webpack": "webpack --watch --mode=development",
     "heroku-postbuild": "webpack -p"
   },
@@ -25,7 +24,6 @@
   },
   "devDependencies": {
     "css-loader": "^3.5.3",
-    "jest": "^26.0.1",
     "style-loader": "^1.2.1"
   }
 }
