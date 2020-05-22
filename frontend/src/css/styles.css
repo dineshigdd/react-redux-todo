@@ -47,8 +47,8 @@ label{
 }
 
 .todo-list-items {
-    display: table !important;
-    margin: auto;
+    display: table !important;   
+    /* margin: auto; */
     margin-top: 1%; 
     max-width: 465px;
     height: 5em;   
@@ -63,9 +63,7 @@ label{
 
 .step-item-container{
     float: left;
-    width: 100px;
-    position: relative;
-    left: -100px;
+    width: 365px;   
 }
 
 .btn-step-submit{
@@ -73,4 +71,11 @@ label{
     position: relative;
     top: -44px;
     left: 40px;
+}
+
+/* #root > div > div > div:nth-child(3) > div > div:nth-child(n){
+    position: static !important;
+} */
+.todos-col{
+    position: static !important;
 }

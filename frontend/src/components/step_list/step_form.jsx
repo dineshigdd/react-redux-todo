@@ -45,8 +45,11 @@ class StepForm extends React.Component{
                 <div className="step-form-container">     
                     <form className="form-group" onSubmit={ this.handleSubmit }>
                         <div>
-                            <b>step:</b><input className="form-control"  value={this.state.title } 
-                                     onChange={ this.getInput } name='title' type="text"/>                           
+                            <b>step:</b><input className="form-control" 
+                                                value={this.state.title } 
+                                                onChange={ this.getInput } 
+                                                name='title' type="text"
+                                                required/>                           
                             </div>
                             <button className="btn btn-secondary btn-step-submit">submit</button>
                     </form>            

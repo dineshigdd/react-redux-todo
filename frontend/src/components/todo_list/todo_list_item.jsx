@@ -43,11 +43,11 @@ class TodoListItem extends React.Component {
         return(
             //   <div className="container" tabIndex="0">     
                     <div className="row" tabIndex="0">
-                        <div className="col">                                                 
+                        <div className="col todos-col">                                                 
                             <a onClick={ this.handleDetail }><b>{ todo.title }</b></a>                                          
                             { ( this.state.detail ) ?  showDetailView:'' }     
                         </div>         
-                        <div  className="col">  
+                        <div style={{position: "static"}} className="col">  
                             <button className="toggle-done-button btn btn-primary" onClick={ this.updateTodo }>
                             { todo.done ? "undone": "done" }
                             </button>                            

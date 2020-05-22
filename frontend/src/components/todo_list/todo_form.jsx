@@ -65,6 +65,7 @@ class TodoForm extends React.Component{
                                 name="title" 
                                 type="text"
                                 value={ this.state.title}
+                                required
                             />                         
                          </div>
 
@@ -74,7 +75,8 @@ class TodoForm extends React.Component{
                                 className="form-control"                              
                                 rows="3"
                                 name="body" 
-                                value={ this.state.body}>                        
+                                value={ this.state.body}
+                                required>                        
                                 </textarea>                         
                         </div>
                           <button className ="btn btn-primary btn-create-todo">Create a todo</button>                        
