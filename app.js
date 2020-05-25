@@ -6,6 +6,7 @@ const db = require('./config/keys').mongoURI;
 const users = require("./routes/api/users");
 const todos = require("./routes/api/todos")
 const bodyParser = require("body-parser");
+const passport = require('passport');
 
 
 app.use( bodyParser.urlencoded({ extended: false }));
@@ -17,6 +18,7 @@ mongoose
     .then(() => console.log("connected to mongodb"))
     .catch(err => console.log(err))
 
-app.get("/", (req, res) => res.send("Hello World"));    
+app.use( passport.initialize());  
+require('./config/passport')(passport) // this should be here after initialize()
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
