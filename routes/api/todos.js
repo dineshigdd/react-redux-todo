@@ -54,8 +54,16 @@ router.post('/',
                 });
 
 
-                newTodo.save().then(todo => res.json(todo));    
+                newTodo.save(err => {
+                    if( err ){
+                        if(err.name ===  'MongoError' && err.code === 11000){
+                            return res.json('There was a duplicate key error');
+                        }
+                    }
+                    res.json(newTodo)
+                })
                    
+                // then(todo => res.json(todo));   
                 
                 
             }   
