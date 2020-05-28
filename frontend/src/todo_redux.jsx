@@ -31,17 +31,6 @@ import { logout } from './actions/session_actions';
 // window.stepsByTodoId = stepsByTodoId;
 // window.StepList = StepList;
 
-
-document.addEventListener("DOMContentLoaded",()=>{ 
-      
-    const preloadedState = localStorage.state ? 
-        JSON.parse(localStorage.state) : {};        
-    const store = configureStore(preloadedState);
-
-    ReactDOM.render(<Root store={store} />,document.getElementById('root') );
-    
-});
-
 document.addEventListener('DOMContentLoaded', () => {
     let store;
 
